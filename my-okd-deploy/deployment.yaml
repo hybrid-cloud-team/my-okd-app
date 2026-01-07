@@ -18,7 +18,7 @@ spec:
       - name: nginx
         image: mirror.gcr.io/library/nginx:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -29,4 +29,4 @@ spec:
     app: proxy-nginx
   ports:
   - port: 80
-    targetPort: 8080
+    targetPort: 80
